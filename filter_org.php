@@ -1,5 +1,4 @@
 <?php
-print "Hello, World!";
 $category = $_GET['category'];
 echo "Category: " . $category;
 $filteredData = shell_exec('Rscript filter_org_data.R ' . escapeshellarg($category));

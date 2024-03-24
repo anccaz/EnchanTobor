@@ -23,13 +23,23 @@
     function SubmitClick(event) {
       event.preventDefault();
       const selectedCategory = document.getElementById('orgCategory').value;
+      console.log('Selected category', selectedCategory);       //testing
       fetch('filter_org.php?category=' + selectedCategory) 
         .then(response => response.json())
         .then(data => {
           console.log(data);
-        })
-        .catch(error => console.error('Error fetching data:', error));
-    };
+          
+        const orgList = document.getElementById('orgList');
+        orgList.innerHTML = '';
+        data.forEach(org => {
+          const orgName = org.Organization;
+          const orgListItem = document.createElement('p');
+          orgListItem.textContent = orgName;
+          orgList.appendChild(orgListItem);
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  };
   </script>
   
   

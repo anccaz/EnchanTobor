@@ -1,7 +1,6 @@
 # filter_org_data.R
 args <- commandArgs(trailingOnly=TRUE)
 category <- args[1]
-print("category")
 library(dplyr)
 library(stringr)
 stu_org <- read.csv("C:/Users/sueso/Downloads/stu_org.csv")
@@ -31,5 +30,7 @@ stu_org[348, 7] <- "University Department"
 
 filteredOrgData <- stu_org %>%
   filter(CategoryClean == category) # Filter based on organization category
-
-cat(toJSON(filteredData, pretty = TRUE))
+print(filteredOrgData$Title[1])
+json_output <- toJSON(filteredOrgData, pretty = TRUE)
+cat(json_output)
+return(json_output)
