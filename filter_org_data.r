@@ -1,7 +1,7 @@
 # filter_org_data.R
 args <- commandArgs(trailingOnly=TRUE)
 category <- args[1]
-print("Hello2")
+print("category")
 library(dplyr)
 library(stringr)
 stu_org <- read.csv("C:/Users/sueso/Downloads/stu_org.csv")

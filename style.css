@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    font-size: 3.5em;
+    font-size: 3em;
     color: black; 
     pointer-events: none;
     margin-right: 200px;
@@ -39,7 +39,8 @@ header {
     padding: 6px 15px;
     border-radius: 20px;
     margin: 0 10px;
-    font-weight: 600;
+    font-weight: 900;
+    text-size-adjust: 3px;
 }
 
 .navigation a:hover,    

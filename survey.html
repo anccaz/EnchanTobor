@@ -23,7 +23,7 @@
     function SubmitClick(event) {
       event.preventDefault();
       const selectedCategory = document.getElementById('orgCategory').value;
-      fetch('filter_org_data.php?category=' + selectedCategory) 
+      fetch('filter_org.php?category=' + selectedCategory) 
         .then(response => response.json())
         .then(data => {
           console.log(data);

@@ -1,7 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
+print "Hello, World!";
 $category = $_GET['category'];
 echo "Category: " . $category;
 $filteredData = shell_exec('Rscript filter_org_data.R ' . escapeshellarg($category));
