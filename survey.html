@@ -1,0 +1,35 @@
+<form id="orgForm">
+    <label for="orgCategory">Select organization category:</label>
+    <select id="orgCategory" name="orgCategory">
+      <option value="Academic">Academic</option>
+      <option value="Arts and Music">Arts and Music</option>
+      <option value="Departmental/Educational">Departmental/Educational</option>
+      <option value="Services">Services</option>
+      <option value="Sports">Sports</option>
+      <option value="Cultural">Cultural</option>
+      <option value="Social">Social</option>
+      <option value="Religious">Religious</option>
+      <option value="Honor Society">Honor Society</option>
+      <option value="Special Interest">Special Interest</option>
+      <option value="University Department">University Department</option>
+      <option value="Fraternity & Sorority">Fraternity & Sorority</option>
+      <option value="Political">Political</option>
+      <option value="Recreation">Recreation</option>
+    </select>
+    <button type="submit" onclick="SubmitClick">Submit</button>
+  </form>
+
+  <script>
+    function SubmitClick(event) {
+      event.preventDefault();
+      const selectedCategory = document.getElementById('orgCategory').value;
+      fetch('filter_org_data.php?category=' + selectedCategory) 
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    };
+  </script>
+  
+  
