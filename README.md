@@ -1,7 +1,7 @@
 EnchanTobor
 
 ## Inspiration
-As current freshman who went through the on-boarding process, we felt as though the number of school organizations on campus were overwhelming and it difficult to narrow down what clubs or organizations fit our interests. 
+As students who went through the on-boarding process at the Erik Jonsson School of Engineering and Computer Science, we felt as though the number of school organizations on campus were overwhelming and it difficult to narrow down what clubs or organizations fit our interests. 
 
 ## What it does
 We created a website for freshman engineering students to be introduced to the over 300 student clubs and organizations on campus, find a space to explore their interests, and ultimately be better connected to their classmates.
